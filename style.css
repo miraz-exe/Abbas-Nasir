@@ -1,0 +1,135 @@
+html, body {
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  touch-action: manipulation;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #e0e0e0;
+}
+
+#start-screen {
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  background: #fff;
+  z-index: 10;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+/* ✅ Logo bigger */
+#game-logo {
+  width: 30vw;
+  margin-bottom: 15px;
+}
+
+/* ✅ Created by smaller */
+#created-by {
+  font-size: 2vw;
+  margin-bottom: 20px;
+}
+
+#start-btn, #restart-btn {
+  font-size: 3vw;
+  padding: 2vw 5vw;
+  background-color: #007bff;
+  border: none;
+  color: white;
+  border-radius: 10px;
+  cursor: pointer;
+  margin-top: 20px;
+}
+
+#gameContainer {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  background: url('background.jpg') repeat-x;
+  background-size: cover;
+  animation: backgroundScroll 120s linear infinite;
+}
+
+@keyframes backgroundScroll {
+  from { background-position: 0 0; }
+  to { background-position: -1000px 0; }
+}
+
+#trump {
+  position: absolute;
+  bottom: 0;
+  left: 26vw;
+  width: 12vw;
+  height: 12vw;
+  background: url('trump.gif') no-repeat center/contain;
+}
+
+#thakur {
+  position: absolute;
+  bottom: 0;
+  left: 1vw;
+  width: 18vw;
+  height: 18vw;
+  background: url('thakur.gif') no-repeat center/contain;
+}
+
+#caughtGif {
+  position: absolute;
+  bottom: 0;
+  left: 15vw;
+  width: 25vw;
+  display: none;
+  z-index: 5;
+}
+
+.jump {
+  animation: jump 1s ease-out;
+}
+
+@keyframes jump {
+  0% { transform: translateY(0); }
+  40% { transform: translateY(-18vw); }
+  60% { transform: translateY(-18vw); }
+  100% { transform: translateY(0); }
+}
+
+#score {
+  position: absolute;
+  top: 2vw;
+  left: 2vw;
+  font-size: 4vw;
+  font-weight: bold;
+  color: #fff;
+  text-shadow: 2px 2px 4px #000;
+}
+
+#game-over {
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: none;
+  text-align: center;
+  font-size: 2.4vw;
+  color: #fff;
+  white-space: nowrap;
+  text-shadow: 2px 2px 4px #000;
+}
+
+.obstacle {
+  position: absolute;
+  bottom: 0;
+  width: 4vw;
+  height: 4vw;
+  background: url('obstacle.png') no-repeat center/contain;
+}

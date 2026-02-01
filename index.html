@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+  <title>দৌড়া পাটোয়ারী দৌড়া</title>
+  <link rel="stylesheet" href="style.css" />
+
+  <!-- Preload images -->
+  <link rel="preload" as="image" href="background.jpg">
+  <link rel="preload" as="image" href="trump.gif">
+  <link rel="preload" as="image" href="thakur.gif">
+  <link rel="preload" as="image" href="caught.gif">
+  <link rel="preload" as="image" href="obstacle.png">
+  <link rel="preload" as="image" href="logo.png">
+
+  <!-- Preload audio -->
+  <link rel="preload" as="audio" href="jump.mp3" />
+  <link rel="preload" as="audio" href="start.mp3" />
+  <link rel="preload" as="audio" href="caught.mp3" />
+  <link rel="preload" as="audio" href="fight.mp3" />
+  <link rel="preload" as="audio" href="background-music.mp3" />
+</head>
+<body>
+
+  <div id="start-screen">
+
+    <!-- ✅ Logo bigger -->
+    <img 
+      src="logo.png" 
+      alt="Game Logo"
+      id="game-logo"
+    />
+
+    <!-- ✅ Created by smaller -->
+    <div id="created-by">
+      Created by <span style="color:#ff6347;">MIRAZ</span>
+    </div>
+
+    <div id="loading-animation">Loading...</div>
+    <button id="start-btn">দৌড় শুরু</button>
+  </div>
+
+  <div id="gameContainer">
+    <div id="trump"></div>
+    <div id="thakur"></div>
+    <img id="caughtGif" src="caught.gif" />
+    <div id="score">score: 0</div>
+
+    <div id="game-over">
+      পাটোয়ারীকে খাম্বা দিয়ে পিটাচ্ছে আব্বাস কাকু
+      <button id="restart-btn">আবার হবে নাকি?</button>
+    </div>
+  </div>
+
+  <audio id="jumpSound" src="jump.mp3"></audio>
+  <audio id="startSound" src="start.mp3"></audio>
+  <audio id="caughtSound" src="caught.mp3"></audio>
+  <audio id="fightSound" src="fight.mp3"></audio>
+  <audio id="backgroundMusic" src="background-music.mp3" loop></audio>
+
+  <script src="script.js"></script>
+</body>
+</html>
