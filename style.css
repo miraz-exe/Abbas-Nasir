@@ -28,13 +28,11 @@ body {
   align-items: center;
 }
 
-/* ✅ Logo bigger */
 #game-logo {
   width: 30vw;
   margin-bottom: 15px;
 }
 
-/* ✅ Created by smaller */
 #created-by {
   font-size: 2vw;
   margin-bottom: 20px;
@@ -132,4 +130,27 @@ body {
   width: 4vw;
   height: 4vw;
   background: url('obstacle.png') no-repeat center/contain;
+}
+
+/* 🔄 ROTATE NOTICE */
+#rotate-notice {
+  display: none;
+  position: fixed;
+  background: rgba(0,0,0,0.85);
+  color: white;
+  width: 100vw;
+  height: 100vh;
+  text-align: center;
+  padding-top: 40vh;
+  font-size: 24px;
+  z-index: 9999;
+}
+
+/* 📱 Portrait হলে game hide, rotate notice show */
+@media screen and (orientation: portrait) {
+  #rotate-notice { display: block; }
+  #start-screen,
+  #gameContainer {
+    display: none !important;
+  }
 }
